@@ -51,7 +51,7 @@ class MoneyManager extends Component {
     const newObject = {
       id: uuidv4(),
       titleInput,
-      amountInput: Number(amountInput),
+      amountInput,
       type: displayText,
     }
     this.setState(prevState => ({
@@ -77,9 +77,9 @@ class MoneyManager extends Component {
     const {transactionsList} = this.state
     transactionsList.forEach(eachTransaction => {
       if (eachTransaction.type === transactionTypeOptions[0].displayText) {
-        income += eachTransaction.amountInput
+        income += Number(eachTransaction.amountInput)
       } else {
-        expenses += eachTransaction.amountInput
+        expenses += Number(eachTransaction.amountInput)
       }
       balance = income - expenses
     })
@@ -91,7 +91,7 @@ class MoneyManager extends Component {
     const {transactionsList} = this.state
     transactionsList.forEach(eachTransaction => {
       if (eachTransaction.type === transactionTypeOptions[0].displayText) {
-        income += eachTransaction.amountInput
+        income += Number(eachTransaction.amountInput)
       }
     })
     return income
@@ -102,7 +102,7 @@ class MoneyManager extends Component {
     const {transactionsList} = this.state
     transactionsList.forEach(eachTransaction => {
       if (eachTransaction.type === transactionTypeOptions[1].displayText) {
-        expenses += eachTransaction.amountInput
+        expenses += Number(eachTransaction.amountInput)
       }
     })
     return expenses
@@ -134,7 +134,7 @@ class MoneyManager extends Component {
             <div className="add-transaction-container">
               <h1>Add Transaction</h1>
               <form onSubmit={this.onAddTransactions}>
-                <label htmlFor="tile">TITLE</label>
+                <label htmlFor="title">TITLE</label>
                 <br />
                 <input
                   onChange={this.onChangeTitle}
@@ -175,15 +175,17 @@ class MoneyManager extends Component {
                   <p className="history-heading">Amount</p>
                   <p className="history-heading">Type</p>
                 </div>
-                <ul className="transaction-container">
-                  {transactionsList.map(eachTransaction => (
-                    <TransactionItem
-                      onDeleteTransaction={this.onDeleteTransaction}
-                      transactionItem={eachTransaction}
-                      key={eachTransaction.id}
-                    />
-                  ))}
-                </ul>
+                {transactionsList.length !== 0 && (
+                  <ul className="transaction-container">
+                    {transactionsList.map(eachTransaction => (
+                      <TransactionItem
+                        onDeleteTransaction={this.onDeleteTransaction}
+                        transactionItem={eachTransaction}
+                        key={eachTransaction.id}
+                      />
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
           </div>
