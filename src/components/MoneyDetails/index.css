@@ -1,0 +1,50 @@
+/* Write your CSS here */
+
+.list-1 {
+  border: 1px solid #84cc16;
+  background-color: #ecfccb;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 260px;
+  margin-right: 35px;
+}
+.list-2 {
+  border: 1px solid #06b6d4;
+  background-color: #cffafe;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 260px;
+  margin-right: 35px;
+}
+.list-3 {
+  border: 1px solid #7c3aed;
+  background-color: #ede9fe;
+  margin-right: 0;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 260px;
+  margin-right: 35px;
+}
+img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+.balance {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.rupees {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 8px;
+}

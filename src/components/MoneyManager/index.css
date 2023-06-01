@@ -1,0 +1,111 @@
+/* Write your CSS here */
+.app-container {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.money-manager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+.welcome-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/money-manager/money-manager-bg.png');
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  max-width: 850px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.money-details-container {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  width: 100%;
+  max-width: 850px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 850px;
+}
+.add-transaction-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  width: 330px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+}
+input {
+  border: 1px solid #cbd5e1;
+  padding: 8px;
+  border-radius: 7px;
+  width: 90%;
+  margin-bottom: 10px;
+}
+select {
+  border: 1px solid #cbd5e1;
+  padding: 8px;
+  border-radius: 7px;
+  width: 90%;
+  margin-bottom: 10px;
+}
+.add-button {
+  background-color: #0b69ff;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.history-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 480px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+.history-list-container {
+  margin-top: 0;
+  border: 1px solid #cbd5e1;
+}
+.history-types-container {
+  display: flex;
+  flex-direction: row;
+}
+.history-title {
+  margin-bottom: 10px;
+}
+.history-heading {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 35px;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+.transaction-container {
+  width: 100%;
+  list-style-type: none;
+  margin-top: 0;
+  padding: 0;
+}
