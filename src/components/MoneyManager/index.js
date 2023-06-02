@@ -127,9 +127,9 @@ class MoneyManager extends Component {
               Welcome back to your <span>Money Manager</span>
             </p>
           </div>
-          <ul className="money-details-container">
+          <div className="money-details-container">
             <MoneyDetails amountDetails={object} />
-          </ul>
+          </div>
           <div className="container">
             <div className="add-transaction-container">
               <h1>Add Transaction</h1>
